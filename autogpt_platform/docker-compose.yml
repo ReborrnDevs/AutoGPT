@@ -57,11 +57,11 @@ services:
       file: ./docker-compose.platform.yml
       service: websocket_server
 
-#  frontend:
-#    <<: *agpt-services
-#    extends:
-#      file: ./docker-compose.platform.yml
-#      service: frontend
+ frontend:
+   <<: *agpt-services
+   extends:
+     file: ./docker-compose.platform.yml
+     service: frontend
 
   # Supabase services
   studio:
