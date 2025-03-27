@@ -1,7 +1,7 @@
 # Base stage for both dev and prod
 FROM node:21-alpine AS base
 WORKDIR /app
-COPY autogpt_platform/frontend/package.json autogpt_platform/frontend/yarn.lock ./
+COPY autogpt_platform/frontend/package.json ./
 RUN --mount=type=cache,target=/usr/local/share/.cache yarn install --frozen-lockfile
 
 # Dev stage
