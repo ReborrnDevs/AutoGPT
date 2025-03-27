@@ -2,7 +2,7 @@
 FROM node:21-alpine AS base
 WORKDIR /app
 COPY autogpt_platform/frontend/package.json ./
-RUN --mount=type=cache,target=/usr/local/share/.cache yarn install --frozen-lockfile
+RUN yarn install
 
 # Dev stage
 FROM base AS dev
